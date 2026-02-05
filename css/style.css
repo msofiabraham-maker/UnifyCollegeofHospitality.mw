@@ -1,0 +1,32 @@
+:root{
+  --glass-bg: rgba(255,255,255,0.08);
+  --glass-border: rgba(255,255,255,0.12);
+  --accent: #ff7a18;
+  --accent2: #8a2387;
+  --text: #eaeaea;
+}
+*{box-sizing:border-box;font-family:Inter,system-ui,Arial,Helvetica,sans-serif}
+html,body{height:100%;margin:0;background:#0f1724;color:var(--text)}
+.splash{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(120deg,#071028,#081220);z-index:40}
+.loader{display:flex;flex-direction:column;align-items:center;gap:12px;}
+.logo-spin{width:96px;height:96px;animation:spin 2s linear infinite;border-radius:12px}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.hidden{display:none}
+.fade-out{opacity:0;transform:scale(.98);transition:all .6s ease;pointer-events:none}
+.landing .hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center}
+.landing .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.45);}
+.hero-content{position:relative;text-align:center;color:var(--text);backdrop-filter:blur(6px);padding:40px}
+.logo{width:120px;border-radius:12px}
+.btn{display:inline-block;margin-top:18px;padding:12px 24px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:white;text-decoration:none;border-radius:10px}
+
+.apply-page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;background:linear-gradient(180deg,#071226,#081226)}
+.form-panel{width:100%;max-width:880px;padding:28px;border-radius:14px;border:1px solid var(--glass-border);background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));box-shadow:0 8px 40px rgba(2,6,23,.6)}
+.glass{backdrop-filter: blur(8px)}
+form h2{margin:18px 0 8px}
+label{display:block;margin:8px 0}
+input,select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)}
+.code-box{max-height:240px;overflow:auto;background:rgba(0,0,0,0.2);padding:12px;border-radius:8px;color:#f1f1f1}
+.consent{display:flex;align-items:center;gap:8px;margin-top:12px}
+pre{white-space:pre-wrap;font-family:inherit;font-size:13px}
+
+@media (max-width:640px){.form-panel{padding:18px}}
